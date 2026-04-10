@@ -1,0 +1,97 @@
+{
+  "name": "Lakshay Bhalla",
+  "role": "Lead Engineer & Oracle Specialist",
+  "image": "./profile_img.jpg",
+  "tagline": "Persistence is the key to success.",
+  "summary": "4x Oracle certified implementation specialist and Certified Unqork Developer with extensive experience in CX & CRM. Currently driving engineering excellence at Guardian Life, with a strong history at Walmart Global Tech and Virtuos Digital.",
+  "location": "West Delhi, Delhi, India",
+  "email": "bhalla448@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/lakshay-bhalla",
+  "skills": [
+    {
+      "category": "Core / Enterprise Application",
+      "items": [
+        "Unqork",
+        "Oracle CX",
+        "CRM"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "C#",
+        "PHP",
+        "Javascript",
+        "Java",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "category": "Oracle Products",
+      "items": [
+        "Service Cloud / B2C Service",
+        "Intelligent Advisor",
+        "RightNow Connect"
+      ]
+    },
+    {
+      "category": "DevOps & Tools",
+      "items": [
+        "REST/SOAP APIs",
+        "Oracle BUI Extensions",
+        "Oracle Add-in Development"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Guardian Life",
+      "role": "Lead Engineer - IT",
+      "period": "Dec 2024 - Present",
+      "location": "Gurugram, Haryana, India",
+      "desc": "Leading IT engineering initiatives and digital transformation projects."
+    },
+    {
+      "company": "Walmart Global Tech India",
+      "role": "Software Engineer III",
+      "period": "Nov 2023 - Dec 2024",
+      "location": "Gurgaon",
+      "desc": "Software Engineer II from Oct 2021 - Nov 2023. Delivered high-scale solutions for global retail operations."
+    },
+    {
+      "company": "VIRTUOS DIGITAL",
+      "role": "Senior Succeedant Engineer",
+      "period": "Apr 2020 - Nov 2021",
+      "location": "Gurgaon, India",
+      "desc": "Led 3 Oracle Service Cloud projects successfully. Progressed from Associate Application Developer. Specialized in building custom processes in RightNow Connect PHP frameworks, CTI Integration, and Workflow design."
+    },
+    {
+      "company": "VIRTUOS DIGITAL",
+      "role": "Associate Engineer",
+      "period": "Jan 2019 - Apr 2020",
+      "location": "Gurgaon, India",
+      "desc": "Focused on Customer Portal Development, REST/SOAP API integration, and BUI Extension development."
+    },
+    {
+      "company": "BSES Yamuna Power Limited",
+      "role": "Software Intern",
+      "period": "Jun 2018 - July 2018",
+      "location": "New Delhi",
+      "desc": "Developed a Keylogger Application in C# with accurate keystroke registration and file structuring."
+    }
+  ],
+  "education": [
+    {
+      "school": "World College of Technology and Management",
+      "degree": "Bachelor of Technology - BTech, Computer Science",
+      "period": "2015 - 2019"
+    }
+  ],
+  "certifications": [
+    "Certified Unqork Developer",
+    "Oracle Cloud Customer Connect - Silver Trophy",
+    "Oracle RightNow Cloud Service 2016 Technical Certified",
+    "Oracle Service Cloud 2018 Sales Specialist",
+    "Rookie of the Year (Honors)"
+  ]
+}

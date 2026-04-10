@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* PDF specific styles */
+
+        #resume-preview {
+            background: white;
+        }
+
+        .avoid-split {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-6 font-sans">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+        <!-- Header / Download Action -->
+        <div class="bg-blue-600 p-6 flex flex-col md:flex-row justify-between items-center text-white">
+            <div>
+                <h2 class="text-2xl font-bold">Resume</h2>
+                <p class="text-blue-100 mt-1">Click the button to download resume.</p>
+            </div>
+            <button onclick="exportPDF()"
+                class="mt-4 md:mt-0 bg-white text-blue-600 font-bold py-3 px-6 rounded shadow hover:bg-gray-50 transition flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                        clip-rule="evenodd" />
+                </svg>
+                Download as PDF
+            </button>
+        </div>
+
+        <!-- Visual Preview for the Web -->
+        <div class="p-8 bg-gray-50">
+            <h3 class="text-gray-500 font-semibold mb-4 text-sm tracking-wider uppercase">Document Preview</h3>
+
+            <div id="resume-preview"
+                class="border border-gray-300 p-10 shadow-sm text-gray-800 text-sm leading-relaxed">
+
+                <div class="text-center mb-6 avoid-split">
+                    <h1 class="text-3xl font-bold mb-1">LAKSHAY BHALLA</h1>
+                    <p class="font-bold text-base">Oracle Service Cloud (B2C Service) Specialist | Lead Software
+                        Engineer</p>
+                    <p id="contact-details" class="text-gray-600 text-sm">Delhi, India | +91-*******584 |
+                        ******8@gmail.com</p>
+                </div>
+
+                <div class="mb-5 avoid-split">
+                    <h2 class="text-lg font-bold border-b-2 border-gray-800 uppercase mb-2 pb-1">Professional Summary
+                    </h2>
+                    <p>Results-driven technology professional with 7+ years of enterprise application experience,
+                        featuring deep specialization in Oracle Service Cloud (B2C Service / RightNow) development,
+                        configuration, and implementation. 4x Certified Oracle Service Cloud Implementer with a proven
+                        track record of delivering end-to-end CRM solutions covering custom BUI enhancements, REST/SOAP
+                        API integrations, Customer Portal development, intelligent workflow automation, and data
+                        synchronization. Backed by strong expertise in full-stack cloud development and system
+                        integrations (Kafka, GraphQL, Node.js), consistently driving measurable impacts such as
+                        increased agent efficiency, higher CSAT scores, and optimized handling times for global
+                        enterprises.</p>
+                </div>
+
+                <div class="mb-5 avoid-split">
+                    <h2 class="text-lg font-bold border-b-2 border-gray-800 uppercase mb-2 pb-1">Oracle Service Cloud
+                        Skills & Expertise</h2>
+                    <table class="w-full text-sm">
+                        <tr class="border-b border-gray-100">
+                            <td class="font-bold py-1 w-1/4">Platform Config</td>
+                            <td class="py-1">Custom Business Rules &bull; Workspace Modifications &bull; Data Lifecycle
+                                Policies &bull; Intelligent Advisor Interviews</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="font-bold py-1">Custom Dev</td>
+                            <td class="py-1">Oracle BUI Extensions &bull; Customer Portal Development &bull; CTI
+                                Extensions &bull; Custom Add-ins</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="font-bold py-1">Integration</td>
+                            <td class="py-1">REST/SOAP APIs &bull; Bi-directional Data Sync &bull; Node.js / PHP
+                                Frameworks &bull; Kafka &bull; GraphQL</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="font-bold py-1">Customer Exp.</td>
+                            <td class="py-1">Self-Service Portals &bull; UI/UX Optimization &bull; Image Compression
+                                Widgets &bull; Agent Efficiency Optimization</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold py-1">Automation</td>
+                            <td class="py-1">Workflow Orchestration &bull; PI/PHI Data Processing &bull; Shell Cron Jobs
+                                &bull; Incident Management</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Preview keeps flex layout since it's just web -->
+                <div class="mb-5">
+                    <div class="avoid-split mb-4">
+                        <h2 class="text-lg font-bold border-b-2 border-gray-800 uppercase mb-2 pb-1">Professional
+                            Experience</h2>
+
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-bold text-base">Lead Software Engineer <span class="font-normal">| Guardian
+                                    Life Insurance Company of America (GLIC)</span></h3>
+                            <span class="font-bold">Dec 2024 &ndash; Present</span>
+                        </div>
+                        <p class="italic text-gray-700 mb-2">Oracle B2C Service Customization & Integration</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><b>Engineered advanced Oracle BUI enhancements</b>, developing custom extensions and
+                                integrations to significantly improve agent efficiency and reduce average handling time
+                                (AHT).</li>
+                            <li><b>Optimized core system configurations</b>, streamlining complex business rules and
+                                workspace modifications to ensure faster rule execution and platform responsiveness.
+                            </li>
+                            <li><b>Established robust Data Lifecycle policies</b> to manage automated data archival,
+                                alongside rigorous code optimization for existing BUI extensions.</li>
+                            <li><b>Integrated auxiliary Unqork applications</b> with Oracle Service Cloud to build
+                                seamless, cross-platform enterprise Incident Management processes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4 avoid-split">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-bold text-base">Software Engineer II & III <span class="font-normal">|
+                                    Walmart Global Technology</span></h3>
+                            <span class="font-bold">Oct 2021 &ndash; Dec 2024</span>
+                        </div>
+                        <p class="italic text-gray-700 mb-2">Oracle CRM Implementation & Cloud Development</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><b>Led end-to-end CRM implementations and management</b> across multiple international
+                                business units, ensuring on-time delivery, budget adherence, and alignment with global
+                                project objectives.</li>
+                            <li><b>Enhanced the customer experience and portal UI/UX</b>, developing a client-side image
+                                compression widget that reduced file attachment sizes, cut upload times, and achieved a
+                                <b>30% reduction in related support tickets</b>.
+                            </li>
+                            <li><b>Implemented Intelligent Advisor interviews</b> to streamline complex customer
+                                inquiries, directly contributing to a <b>67% increase in First Contact Resolution
+                                    (FCR)</b> and a <b>40% increase in overall Customer Satisfaction (CSAT)</b>.</li>
+                            <li><b>Designed and executed complex system integrations</b>, building bi-directional data
+                                synchronization bridges between Oracle CRM and internal/external systems using RESTful
+                                API services (Node.js) to ensure data integrity.</li>
+                            <li><b>Spearheaded backend automation and data management</b>, handling PI and PHI data
+                                safely by integrating Kafka for real-time processing and GraphQL for flexible access,
+                                resulting in a <b>50% increase in data processing efficiency</b>.</li>
+                            <li><b>Built efficient workflows and custom workspaces</b> to automate routine service
+                                processes and boost cross-team productivity.</li>
+                        </ul>
+                    </div>
+
+                    <div class="mb-4 avoid-split">
+                        <div class="flex justify-between items-baseline">
+                            <h3 class="font-bold text-base">Software Engineer <span class="font-normal">| Virtuos
+                                    Digital Ltd.</span></h3>
+                            <span class="font-bold">Jan 2019 &ndash; Oct 2021</span>
+                        </div>
+                        <p class="italic text-gray-700 mb-2">Oracle RightNow Development & System Integration</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li><b>Built custom processes, BUI extensions, and add-ins</b> within Oracle RightNow to
+                                extend platform functionality, streamline operations, and meet specific business
+                                requirements.</li>
+                            <li><b>Integrated CTI (Computer Telephony Integration) extensions</b> to optimize live
+                                customer interactions, enhance call center operations, and improve agent productivity.
+                            </li>
+                            <li><b>Developed intuitive Customer Portals</b> featuring robust self-service options and
+                                modern UI designs to elevate the end-user experience.</li>
+                            <li><b>Engineered REST/SOAP API integrations and connected PHP frameworks</b> to facilitate
+                                seamless data exchange and application interoperability between disparate enterprise
+                                systems.</li>
+                            <li><b>Designed and implemented complex workflows and workspaces</b> to automate repetitive
+                                tasks, minimize manual errors, and elevate overall operational output.</li>
+                            <li><b>Contributed to sales enablement</b> by developing compelling pre-sales and demo
+                                environments that effectively showcased Oracle product capabilities, leading to
+                                increased sales conversion rates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-5 avoid-split">
+                    <h2 class="text-lg font-bold border-b-2 border-gray-800 uppercase mb-2 pb-1">Certifications</h2>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><b>4x Oracle Service Cloud (B2C Service) Implementation Certification</b></li>
+                        <li>Unqork Certified Developer</li>
+                    </ul>
+                </div>
+
+                <div class="mb-5 avoid-split">
+                    <h2 class="text-lg font-bold border-b-2 border-gray-800 uppercase mb-2 pb-1">Education & Highlights
+                    </h2>
+                    <div class="flex justify-between font-bold mb-2">
+                        <span>Bachelor of Technology (B.Tech) &mdash; Computer Science / IT</span>
+                        <span>M.D.U Rohtak University</span>
+                    </div>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li><b>7+ years of total enterprise technology experience</b>, seamlessly bridging deep Oracle
+                            CRM specialization with modern cloud application development.</li>
+                        <li><b>Proven track record of driving measurable business outcomes</b>, including a 40% increase
+                            in CSAT, 67% boost in FCR, and 50% improvement in data processing efficiency.</li>
+                        <li><b>Proficient in all core Oracle B2C pillars</b>: BUI Extensions, Custom Workspaces,
+                            Integrations (REST/SOAP/Kafka), Intelligent Advisor, and Customer Portal Development.</li>
+                        <li><b>Demonstrated leadership abilities</b> in managing high-impact CRM projects from inception
+                            to completion, optimizing system performance, and delivering scalable enterprise solutions
+                            on schedule.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function exportPDF() {
+            let contact_details = document.getElementById("contact-details");
+            contact_details.innerHTML = "Delhi, India | +91-8076567584 | Bhalla448@gmail.com";
+            var element = document.getElementById('resume-preview');
+
+            // Temporarily remove borders so they don't show up in the PDF document
+            element.classList.remove('border', 'border-gray-300', 'shadow-sm');
+
+            var opt = {
+                margin: [0.25, 0.25, 0.25, 0.25], // top, left, bottom, right margins in inches
+                filename: 'Lakshay_Bhalla_Oracle_Resume.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 2, useCORS: true },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: 'css', avoid: '.avoid-split' }
+            };
+
+            // Generate PDF and then restore the styling for the web preview
+            html2pdf().set(opt).from(element).save().then(() => {
+                element.classList.add('border', 'border-gray-300', 'shadow-sm');
+                contact_details.innerHTML = "Delhi, India | +91-*******584 | ******8@gmail.com";
+            });
+        }
+    </script>
+</body>
+
+</html>
